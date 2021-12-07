@@ -4,6 +4,8 @@ import com.kuoji.builderpattern.service.impl.Builder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.concurrent.DelayQueue;
+
 @SpringBootTest
 class BuilderPatternApplicationTests {
 
@@ -16,6 +18,7 @@ class BuilderPatternApplicationTests {
         System.out.println(builder.levelTwo(98.25D).getDetail());
         // 现代简约
         System.out.println(builder.levelThree(85.43D).getDetail());
+
     }
 
 }

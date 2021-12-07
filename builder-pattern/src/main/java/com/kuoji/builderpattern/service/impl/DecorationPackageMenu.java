@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 装修包
+ * 装修包, 承载建造过程中的填充器。相当于这是一套承载物料和创建者中间衔接的内容
  */
 public class DecorationPackageMenu implements IMenu {
 
@@ -25,6 +25,14 @@ public class DecorationPackageMenu implements IMenu {
         this.area = new BigDecimal(area);
         this.grade = grade;
     }
+
+    /**
+     * 装修包的实现中每一个方法都会了 this，也就可以非常方便的用于连续填充各项物料。
+     * 同时在填充时也会根据物料计算平米数下的报价，吊顶和涂料按照平米数适量乘以常熟计算。
+     * 最后同样提供了统一的获取装修清单的明细方法
+     * @param matter
+     * @return
+     */
 
     public IMenu appendCeiling(Matter matter) {
         list.add(matter);
