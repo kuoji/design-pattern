@@ -3,7 +3,7 @@ package com.kuoji.bridgepattern.mode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PayCypher {
+public class PayCypher implements IPayMode{
 
     protected Logger logger = LoggerFactory.getLogger(PayCypher.class);
 
